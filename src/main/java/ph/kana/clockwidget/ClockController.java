@@ -24,15 +24,31 @@ public class ClockController implements Initializable {
     private Label localDateLabel;
 
     @FXML
+    private Pane rootPane;
+
+    @FXML
     private GridPane binariesGridPane;
 
+    private boolean appRunning = true;
     private final int BIT_COUNT = 6;
     private final Circle[][] LIGHTS = new Circle[3][BIT_COUNT];
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        initializeCloseEvent();
         initializeLightsCache();
         clockThread().start();
+    }
+
+    private void initializeCloseEvent() {
+        Platform.runLater(() ->
+            rootPane.getScene()
+                .getWindow()
+                .setOnCloseRequest(windowEvent -> {
+                    appRunning = false;
+                    Platform.exit();
+                })
+        );
     }
 
     private void initializeLightsCache() {
