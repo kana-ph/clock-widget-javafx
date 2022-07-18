@@ -9,9 +9,8 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootPane" fx:controller="ph.kana.clockwidget.ClockController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="320.0" styleClass="dark-bg" stylesheets="@style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="170.0" prefWidth="240.0" styleClass="dark-bg" stylesheets="@style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ph.kana.clockwidget.ClockController">
    <children>
-      <Label text="Local" textFill="#fb8500" underline="true" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
       <Label fx:id="localTimeLabel" alignment="CENTER" layoutX="48.0" layoutY="34.0" styleClass="main-clock" text="23:59:59" textFill="#ffb703" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="35.0">
          <font>
             <Font name="Monospaced Regular" size="42.0" />
@@ -23,7 +22,7 @@
             <String fx:value="date-label" />
          </styleClass>
       </Label>
-       <GridPane fx:id="binariesGridPane" alignment="CENTER" hgap="1.0" layoutX="14.0" layoutY="129.0" prefHeight="80.0" vgap="1.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0">
+       <GridPane fx:id="binariesGridPane" alignment="CENTER" layoutX="14.0" layoutY="129.0" prefHeight="75.0" prefWidth="232.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0">
            <columnConstraints>
                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

@@ -8,13 +8,9 @@
     -fx-stroke: #031a57;
 }
 
-.label {
+.date-label {
     -fx-text-fill: #fb8500;
     -fx-font-weight: bold;
-}
-
-.date-label {
-    -fx-font-weight: normal;
 }
 
 .main-clock {

@@ -12,7 +12,7 @@ public class ClockWidgetApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(ClockWidgetApplication.class.getResource("clock-widget.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        Scene scene = new Scene(fxmlLoader.load(), 240, 170);
         stage.setTitle("Clock by kana.ph");
         stage.setAlwaysOnTop(true);
         stage.setScene(scene);
