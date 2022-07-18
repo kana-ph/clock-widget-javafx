@@ -1,0 +1,26 @@
+.light-on {
+    -fx-fill: #145876;
+    -fx-stroke: #145876;
+}
+
+.light-off {
+    -fx-fill: #031a57;
+    -fx-stroke: #031a57;
+}
+
+.label {
+    -fx-text-fill: #fb8500;
+    -fx-font-weight: bold;
+}
+
+.date-label {
+    -fx-font-weight: normal;
+}
+
+.main-clock {
+    -fx-text-fill: #ffb703;
+}
+
+.dark-bg {
+    -fx-background-color: #090b32;
+}
