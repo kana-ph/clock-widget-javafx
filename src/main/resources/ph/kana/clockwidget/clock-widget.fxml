@@ -12,10 +12,11 @@
            text="23:59:59" textFill="#ffb703" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0"
            AnchorPane.topAnchor="35.0">
         <font>
-          <Font name="Monospaced Regular" size="42.0"/>
+            <Font name="Monospaced Regular" size="42.0"/>
         </font>
     </Label>
-    <Label fx:id="localDateLabel" layoutX="261.0" styleClass="date-label" layoutY="22.0" text="March 19" AnchorPane.rightAnchor="14.0"
+    <Label fx:id="localDateLabel" layoutX="261.0" styleClass="date-label" layoutY="22.0" text="March 19"
+           AnchorPane.rightAnchor="14.0"
            AnchorPane.topAnchor="14.0">
     </Label>
     <GridPane fx:id="binariesGridPane" alignment="CENTER" layoutX="14.0" layoutY="129.0" prefHeight="75.0"
@@ -34,60 +35,60 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
         </rowConstraints>
-        <Circle fill="DARKBLUE" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="light-off"
+        <Circle radius="10.0" strokeType="INSIDE" styleClass="light-off"
                 GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0"
                 GridPane.valignment="CENTER"/>
-        <Circle fill="DARKBLUE" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="light-off"
+        <Circle radius="10.0" strokeType="INSIDE" styleClass="light-off"
                 GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0"
                 GridPane.valignment="CENTER"/>
-        <Circle fill="DARKBLUE" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="light-off"
+        <Circle radius="10.0" strokeType="INSIDE" styleClass="light-off"
                 GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="0"
                 GridPane.valignment="CENTER"/>
-        <Circle fill="DARKBLUE" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="light-off"
+        <Circle radius="10.0" strokeType="INSIDE" styleClass="light-off"
                 GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="0"
                 GridPane.valignment="CENTER"/>
-        <Circle fill="DARKBLUE" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="light-off"
+        <Circle radius="10.0" strokeType="INSIDE" styleClass="light-off"
                 GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="0"
                 GridPane.valignment="CENTER"/>
-        <Circle fill="DARKBLUE" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="light-off"
+        <Circle radius="10.0" strokeType="INSIDE" styleClass="light-off"
                 GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="0"
                 GridPane.valignment="CENTER"/>
 
-        <Circle fill="DARKBLUE" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="light-off"
+        <Circle radius="10.0" strokeType="INSIDE" styleClass="light-off"
                 GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1"
                 GridPane.valignment="CENTER"/>
-        <Circle fill="DARKBLUE" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="light-off"
+        <Circle radius="10.0" strokeType="INSIDE" styleClass="light-off"
                 GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1"
                 GridPane.valignment="CENTER"/>
-        <Circle fill="DARKBLUE" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="light-off"
+        <Circle radius="10.0" strokeType="INSIDE" styleClass="light-off"
                 GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1"
                 GridPane.valignment="CENTER"/>
-        <Circle fill="DARKBLUE" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="light-off"
+        <Circle radius="10.0" strokeType="INSIDE" styleClass="light-off"
                 GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1"
                 GridPane.valignment="CENTER"/>
-        <Circle fill="DARKBLUE" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="light-off"
+        <Circle radius="10.0" strokeType="INSIDE" styleClass="light-off"
                 GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1"
                 GridPane.valignment="CENTER"/>
-        <Circle fill="DARKBLUE" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="light-off"
+        <Circle radius="10.0" strokeType="INSIDE" styleClass="light-off"
                 GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1"
                 GridPane.valignment="CENTER"/>
 
-        <Circle fill="DARKBLUE" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="light-off"
+        <Circle radius="10.0" strokeType="INSIDE" styleClass="light-off"
                 GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="2"
                 GridPane.valignment="CENTER"/>
-        <Circle fill="DARKBLUE" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="light-off"
+        <Circle radius="10.0" strokeType="INSIDE" styleClass="light-off"
                 GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2"
                 GridPane.valignment="CENTER"/>
-        <Circle fill="DARKBLUE" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="light-off"
+        <Circle radius="10.0" strokeType="INSIDE" styleClass="light-off"
                 GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2"
                 GridPane.valignment="CENTER"/>
-        <Circle fill="DARKBLUE" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="light-off"
+        <Circle radius="10.0" strokeType="INSIDE" styleClass="light-off"
                 GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2"
                 GridPane.valignment="CENTER"/>
-        <Circle fill="DARKBLUE" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="light-off"
+        <Circle radius="10.0" strokeType="INSIDE" styleClass="light-off"
                 GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2"
                 GridPane.valignment="CENTER"/>
-        <Circle fill="DARKBLUE" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="light-off"
+        <Circle radius="10.0" strokeType="INSIDE" styleClass="light-off"
                 GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2"
                 GridPane.valignment="CENTER"/>
     </GridPane>
