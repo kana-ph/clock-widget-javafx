@@ -1,18 +1,16 @@
 package ph.kana.clockwidget;
 
-import javafx.application.Platform;
+import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Pane;
 import javafx.scene.shape.Circle;
 
 import java.net.URL;
 import java.time.LocalDateTime;
 import java.time.format.TextStyle;
-import java.util.BitSet;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -24,31 +22,16 @@ public class ClockController implements Initializable {
     private Label localDateLabel;
 
     @FXML
-    private Pane rootPane;
-
-    @FXML
     private GridPane binariesGridPane;
 
-    private boolean appRunning = true;
     private final int BIT_COUNT = 6;
     private final Circle[][] LIGHTS = new Circle[3][BIT_COUNT];
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        initializeCloseEvent();
         initializeLightsCache();
-        clockThread().start();
-    }
-
-    private void initializeCloseEvent() {
-        Platform.runLater(() ->
-            rootPane.getScene()
-                .getWindow()
-                .setOnCloseRequest(windowEvent -> {
-                    appRunning = false;
-                    Platform.exit();
-                })
-        );
+        clockAnimation()
+            .start();
     }
 
     private void initializeLightsCache() {
@@ -60,39 +43,31 @@ public class ClockController implements Initializable {
         }
     }
 
-    private Thread clockThread() {
-        return new Thread(() -> {
-            try {
-                while (appRunning) {
-                    var currentTime = LocalDateTime.now();
-                    Platform.runLater(updateLocalDateTime(currentTime));
-                    Platform.runLater(updateBinaryClock(currentTime));
-                    Thread.sleep(1000L);
-                }
-            } catch (InterruptedException e) {
-                e.printStackTrace(System.err);
+    private AnimationTimer clockAnimation() {
+        return new AnimationTimer() {
+            @Override
+            public void handle(long now) {
+                var currentTime = LocalDateTime.now();
+                updateLocalDateTime(currentTime);
+                updateBinaryClock(currentTime);
             }
-        }, "clock-thread");
-    }
-
-    private Runnable updateLocalDateTime(LocalDateTime dateTime) {
-        return () -> {
-            var time = String.format("%02d:%02d:%02d", dateTime.getHour(), dateTime.getMinute(), dateTime.getSecond());
-            localTimeLabel.setText(time);
-
-            var month = dateTime.getMonth()
-                .getDisplayName(TextStyle.FULL, Locale.getDefault());
-            var date = String.format("%s %d", month, dateTime.getDayOfMonth());
-            localDateLabel.setText(date);
         };
     }
 
-    private Runnable updateBinaryClock(LocalDateTime time) {
-        return () -> {
-            setBinaryClock(0, toBits(time.getHour()));
-            setBinaryClock(1, toBits(time.getMinute()));
-            setBinaryClock(2, toBits(time.getSecond()));
-        };
+    private void updateLocalDateTime(LocalDateTime dateTime) {
+        var time = String.format("%02d:%02d:%02d", dateTime.getHour(), dateTime.getMinute(), dateTime.getSecond());
+        localTimeLabel.setText(time);
+
+        var month = dateTime.getMonth()
+            .getDisplayName(TextStyle.FULL, Locale.getDefault());
+        var date = String.format("%s %d", month, dateTime.getDayOfMonth());
+        localDateLabel.setText(date);
+    }
+
+    private void updateBinaryClock(LocalDateTime time) {
+        setBinaryClock(0, toBits(time.getHour()));
+        setBinaryClock(1, toBits(time.getMinute()));
+        setBinaryClock(2, toBits(time.getSecond()));
     }
 
     private boolean[] toBits(int n) {
